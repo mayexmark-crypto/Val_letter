@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You, My Love ❤️</title>
+  
+  <style>
+    :root{
+      --bg1:#ffb3c7;
+      --bg2:#ffd1dc;
+      --card:#fff7fa;
+      --text:#3a1f26;
+      --title:#c2185b;
+      --accent:#e91e63;
+      --shadow: 0 14px 35px rgba(0,0,0,.14);
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(255,255,255,.55), transparent 35%),
+        radial-gradient(circle at 85% 20%, rgba(255,255,255,.35), transparent 40%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Subtle Valentine's watermark hearts */
+    body::before, body::after{
+      content:"";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .14;
+      background-size: 180px 180px;
+      background-repeat: repeat;
+      mix-blend-mode: multiply;
+    }
+    body::before{
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Ctext x='20' y='95' font-size='60'%3E%F0%9F%92%97%3C/text%3E%3Ctext x='95' y='50' font-size='48'%3E%F0%9F%8C%B9%3C/text%3E%3Ctext x='105' y='140' font-size='56'%3E%F0%9F%92%9E%3C/text%3E%3C/svg%3E");
+      transform: rotate(-6deg);
+    }
+    body::after{
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Ctext x='30' y='65' font-size='54'%3E%F0%9F%92%96%3C/text%3E%3Ctext x='105' y='110' font-size='58'%3E%F0%9F%92%98%3C/text%3E%3Ctext x='30' y='150' font-size='46'%3E%F0%9F%8C%B7%3C/text%3E%3C/svg%3E");
+      transform: rotate(8deg);
+      opacity: .10;
+    }
+
+    .letter-container {
+      max-width: 820px;
+      width: min(92vw, 820px);
+      background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,247,250,.95));
+      border-radius: 20px;
+      padding: 34px 38px;
+      box-shadow: var(--shadow);
+      border: 2px solid rgba(233,30,99,.25);
+      backdrop-filter: blur(2px);
+      position: relative;
+    }
+
+    /* Decorative corner hearts */
+    .letter-container::before,
+    .letter-container::after{
+      content:"💗";
+      position:absolute;
+      font-size: 28px;
+      opacity:.65;
+    }
+    .letter-container::before{ top: 14px; left: 18px; }
+    .letter-container::after{ bottom: 14px; right: 18px; content:"💞"; }
+
+    .letter-container h1 {
+      text-align: center;
+      color: var(--title);
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 2.35em;
+      letter-spacing: .3px;
+    }
+
+    .letter-container p {
+      font-size: 1.07em;
+      line-height: 1.75;
+      color: var(--text);
+      margin-bottom: 14px;
+      text-align: left;
+    }
+
+    .letter-container p em{
+      color: var(--accent);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    .closing {
+      margin-top: 22px;
+      font-weight: 600;
+      color: #4a2b2b;
+    }
+
+    /* Tiny floating hearts */
+    .floaty {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .floaty span{
+      position:absolute;
+      bottom:-40px;
+      font-size: 18px;
+      opacity: .65;
+      animation: rise 10s linear infinite;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,.08));
+    }
+    @keyframes rise{
+      from { transform: translateY(0) translateX(0); opacity:.0; }
+      10% { opacity:.55; }
+      to { transform: translateY(-110vh) translateX(35px); opacity:0; }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="floaty" aria-hidden="true">
+    <span style="left:8%; animation-duration: 11s; animation-delay: 0s;">💗</span>
+    <span style="left:18%; animation-duration: 9s; animation-delay: 1s;">💘</span>
+    <span style="left:32%; animation-duration: 12s; animation-delay: 2s;">💞</span>
+    <span style="left:48%; animation-duration: 10s; animation-delay: .5s;">🌹</span>
+    <span style="left:62%; animation-duration: 13s; animation-delay: 1.5s;">💖</span>
+    <span style="left:76%; animation-duration: 9.5s; animation-delay: 2.2s;">💝</span>
+    <span style="left:88%; animation-duration: 12.5s; animation-delay: 0.8s;">💗</span>
+  </div>
+
+  <div class="letter-container">
+    <h1>Hi baby,</h1>
+
+    <p>I know you felt like I was so relaxed and calm about Valentine’s Day, acted like it’s just another date on the calendar, but I very well know it ain't. Reason is because you’re not ordinary to me, and what we have is not ordinary either. ❤️</p>
+
+    <p>Sometimes I sit quietly and replay the moments we’ve had together — the way it felt to finally see you in person (of course you wanted it to happen sooner, but I guess everything happened at just the right time), the way time moved too fast, the way your presence made the world feel softer. I still remember how I looked at you and realized, oh… this is real — not an idea, not a fantasy, not a maybe. You were there, in front of me. I felt something settle inside me that I can’t explain without sounding dramatic; it was like my heart finally recognized its own language. 💗</p>
+
+    <p>And now that we’re apart again, I feel it even more because distance does a strange thing. It makes love louder, and small memories heavier. It turns the simplest things into cravings — your voice, your laugh, your face close to mine, the warmth of you when you’re relaxed and not pretending to be tough. I miss you in ways I didn’t expect. Not just emotionally, but physically too. 🥺</p>
+
+    <p>I’m not writing this to be perfect. I’m writing because I don’t want you to ever wonder where you stand with me. I admire you — your softness, your confidence, the way you carry yourself, the way you’re both sweet and bougie in the best way. I love the way you’re you: the kind of woman who can be gentle without being weak, and beautiful without trying too hard. And I want you to know something; I don’t take you lightly. 💘</p>
+
+    <p>I know we met late last year and we’ve only had a few chances to be together in person. But those moments weren’t small to me. They were enough to show me what this could be — what it already is. And yes, I miss you. I want you. I want more time, more days, more nights, more moments where I don’t have to count down the hours until I have to let you go again. 💞</p>
+
+    <p>But since I can’t do that right now, I’ll do the next best thing: showing up for you. I’ll keep being consistent, and being honest. I’ll keep loving you in the ways I can, until I get to love you in the ways I want. 💖</p>
+
+    <p>Happy Valentine’s Day, my love. 🌹</p>
+
+    
+      With all my love,<br>
+      Your baby ❤️
+    </p>
+  </div>
+</body>
+</html>
